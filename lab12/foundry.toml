@@ -4,6 +4,6 @@ out = 'out'
 libs = ['lib']
 remappings = ['@openzeppelin/=lib/openzeppelin-contracts/']
 
-rpc_endpoints = { mainnet = "https://rpc.ankr.com/eth", optimism = "https://rpc.ankr.com/optimism" , fantom = "https://rpc.ankr.com/fantom", arbitrum = "https://rpc.ankr.com/arbitrum", bsc = "https://rpc.ankr.com/bsc", moonriver = "https://moonriver.public.blastapi.io", gnosis = "https://rpc.ankr.com/gnosis", avax = "https://rpc.ankr.com/avalanche", polygon = "https://rpc.ankr.com/polygon"}
+rpc_endpoints = { mainnet = "https://rpc.ankr.com/eth/7090e4f6c3c037e9edaeb98aa22f45431b1ad43222e6ec2b04ae4fbe03061484", optimism = "https://rpc.ankr.com/optimism/7090e4f6c3c037e9edaeb98aa22f45431b1ad43222e6ec2b04ae4fbe03061484" , fantom = "https://rpc.ankr.com/fantom/7090e4f6c3c037e9edaeb98aa22f45431b1ad43222e6ec2b04ae4fbe03061484", arbitrum = "https://rpc.ankr.com/arbitrum/7090e4f6c3c037e9edaeb98aa22f45431b1ad43222e6ec2b04ae4fbe03061484", bsc = "https://rpc.ankr.com/bsc/7090e4f6c3c037e9edaeb98aa22f45431b1ad43222e6ec2b04ae4fbe03061484", moonriver = "https://moonriver.public.blastapi.io/7090e4f6c3c037e9edaeb98aa22f45431b1ad43222e6ec2b04ae4fbe03061484", gnosis = "https://rpc.ankr.com/gnosis/7090e4f6c3c037e9edaeb98aa22f45431b1ad43222e6ec2b04ae4fbe03061484", avax = "https://rpc.ankr.com/avalanche/7090e4f6c3c037e9edaeb98aa22f45431b1ad43222e6ec2b04ae4fbe03061484", polygon = "https://rpc.ankr.com/polygon/7090e4f6c3c037e9edaeb98aa22f45431b1ad43222e6ec2b04ae4fbe03061484"}
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
